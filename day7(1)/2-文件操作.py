@@ -15,6 +15,17 @@ def open_w():
     f.close()
 
 
+def use_readline():
+    f = open('readlinetest.txt', mode='r+', encoding='utf8')
+    while True:
+        text = f.readline()
+        if not text:
+            break
+        print(text, end='')
+    f.close()
+
+
 if __name__ == '__main__':
-# open_r()
-    open_w()
+    # open_r()
+    # open_w()
+    use_readline()
