@@ -16,6 +16,11 @@ def open_w():
 
 
 def use_readline():
+    """
+    用while实现
+    一行一行的读文件，
+    :return:
+    """
     f = open('readlinetest.txt', mode='r+', encoding='utf8')
     while True:
         text = f.readline()
