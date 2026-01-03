@@ -61,7 +61,7 @@ def use_deepcopy():
     d = copy.deepcopy(c)
     print(id(c))
     print(id(d))
-    print("-"*50)
+    print("-" * 50)
     print(id(c[0]))
     print(id(d[0]))
     print(d)
@@ -71,8 +71,30 @@ def use_deepcopy():
     print(c)
     print(d)
 
+
+class Hero:
+    def __init__(self, name, blood):
+        self.name = name
+        self.blood = blood
+        self.equipment = ['鞋子', '指环']
+
+
+def use_copy_own_obj():
+    """
+    实际对于自定义对象的练习
+    :return:
+    """
+    old_hero = Hero('蚂蚁', 90)
+    new_hero = copy.deepcopy(old_hero)
+    new_hero.blood = 80  # 新对象修改后，原对象不会受到任何影响
+    new_hero.equipment.append('药水')
+    print(old_hero.blood)
+    print(old_hero.equipment)
+
+
 if __name__ == '__main__':
     # use_list_copy()
     # use_copy()
     # use_copy2()
-    use_deepcopy()
+    # use_deepcopy()
+    use_copy_own_obj()
