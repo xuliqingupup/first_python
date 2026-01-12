@@ -23,6 +23,9 @@ def use_copy():
     """
     a = [1, 2, 3]
     b = copy.copy(a)
+    c =a
+    print(id(a), id(b))
+    print(id(c))
     b[0] = 10
     print(id(a))
     print(id(b))
@@ -94,7 +97,7 @@ def use_copy_own_obj():
 
 if __name__ == '__main__':
     # use_list_copy()
-    # use_copy()
+    use_copy()
     # use_copy2()
     # use_deepcopy()
-    use_copy_own_obj()
+    # use_copy_own_obj()
